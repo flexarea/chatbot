@@ -4,16 +4,6 @@ import random
 
 class ChatBot:
     def make_reply(self, text: str) -> str:
-        """
-        The method where you do your regular expression work!
-
-        Args:
-            text (str): the text of the message sent
-
-        Returns:
-            str: the chatbot's response
-        """
-
         replies = {r"\b(hello|hi|hey|what up|what's up|yo|good morning)\b": "hey, how are you today?",
                    r"\b(well|fine|good|chilling)\b": "Glad to hear that! How old are you?",
                    r"^(i |i'm |i am )?\d{1,2}.*?$": "As Pierre Corneille said, value doesn't wait the number of years. You can still be anything you want.",
@@ -34,37 +24,18 @@ class ChatBot:
 
     @staticmethod
     def get_name() -> str:
-        """
-        Gets the name of your chatbot
-        This will be used in the web interface
-
-        Returns:
-            str: the name of your chatbot
-        """
         return "artemisx"
         raise NotImplementedError
 
 
     @staticmethod
     def examples() -> List[str]:
-        """
-        Gets some examples of how your chatbot should be run
-
-        Returnsescription_
-        """
         lst = ["How do I make my time productive", "I am tired of failing", "What's the purpose of life", "How can I be better?", " I am heartbroken ", "Tell me a joke", "I give up"]
         return lst
         raise NotImplementedError
 
 
 def get_user_statement() -> str:
-    """
-    Get user input and normalizes it by stripping whitespace and
-    converting to lowercase
-
-    Returns:
-        str: normalized string from standard input
-    """
     return input("you: ").lower().strip()
 
 
